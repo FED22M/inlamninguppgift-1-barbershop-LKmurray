@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:wght@300;400&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+        "content-1"
+        "content-2"
+        "content-3"
+        "content-4"
+        "content-5"
+        "content-6";
+    width: repeat(6, 100vw);
+}
+
+.content-1 {
+    grid-area: content-1;
+    height: 100vh;
+}
+
+.content-2 {
+    grid-area: content-2;
+    height: 100vh;
+}
+
+.content-3 {
+    grid-area: content-3;
+    height: 100vh;
+}
+
+.content-4 {
+    grid-area: content-4;
+    height: 100vh;
+}
+
+.content-5 {
+    grid-area: content-5;
+    height: 100vh;
+}
+
+.content-6 {
+    grid-area: content-5;
+    height: 100vh;
+}
+
+/* .content-1  */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/andre-reis-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 112vh;
+}
+
+header {
+    background-color: rgba(9, 6, 1, 0.6);
+    position: fixed;
+    z-index: 1;
+    top: 6px;
+}
+
+header .header-text {
+    width: 100vw;
+    text-transform: uppercase;
+}
+
+.header-text h1 {
+    display: inline-block;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    font-size: 33px;
+    font-weight: 800;
+    padding: 2px;
+    margin: 0px 0px 0px 8px;
+    letter-spacing: -2px;
+}
+
+nav {
+    float: right;
+    margin: 0px;
+}
+
+nav p {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 20px;
+    color: rgba(225, 225, 225, 0.5);
+    letter-spacing: 3px;
+    margin: 0px;
+    display: inline-block;
+    margin-top: 0.45em;
+    margin-right: 1em;
+}
+
+.banner .banner-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* display: grid;
+    grid-template-areas:
+        "."
+        "h2"
+        "h3"
+        "p"
+        "about";
+    grid-template-rows: 85% 10% 48% 50% 10%;
+    grid-template-columns: 2% 99% 1fr;
+} */
+
+.banner-text h2 {
+    /* grid-area: h2;
+    grid-column-start: 2; */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: rgb(191 146 91);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 60% 0% 1% 0%;
+    padding-left: 2%;
+}
+
+.banner-text h3 {
+    /* grid-area: h3;
+    grid-column-start: 2; */
+    display: inline-block;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin: 0% 0% 6% 0%;
+    width: 98vw;
+    padding-left: 2%;
+}
+
+.banner-text h3 .outline-text {
+    color: rgba(234, 240, 246, 0);
+    -webkit-text-stroke: 1.1px white;
+    width: 100vw;
+}
+
+.banner-text p {
+    /* grid-area: p;
+    grid-column-start: 2; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 30px;
+    margin: 0% 0% 7% 0%;
+    padding-left: 3%;
+}
+
+.banner .banner-text .about {
+    /* grid-area: about;
+    grid-column-start: 2; */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    border: 2.5px solid rgb(191 146 91);
+    background-color: rgba(234, 240, 246, 0);
+    width: 50%;
+    padding: 0px;
+    height: 50px;
+    align-items: center;
+    margin: 2% 0px 0px 3%;
+}
+
+.about p {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.2em;
+    color: rgb(191 146 91);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding: 3% 6% 4% 6%;
+}
+
+.services .services-text {
+    display: grid;
+    grid-template-areas:
+        "."
+        "hair-styles"
+        "beard-trim";
+    grid-template-rows: 10vh 45vh 45vh;
+    grid-template-columns: 50% 50%;
+    width: repeat(3, 100vh);
+}
+
+.services-text .hair-styles {
+    grid-area: hair-styles;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(191 146 91);
+}
+
+.services-text .beard-trim {
+    grid-area: beard-trim;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(183 134 73);
+}
+
+.services-text h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+
+.services-text p {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.9em;
+}
+
+.hair-client img {
+    margin-top: -24%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 150px;
+    clip-path: circle(40%);
+    opacity: 89%;
+}
+
+.beard-trim img {
+    margin-top: -23%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 170px;
+    clip-path: circle(40%);
+    opacity: 96%;
+}
+
+/*sida 2 services*/
+
+.services2-text {
+    display: grid;
+    grid-template-areas:
+        "."
+        "hot-shave"
+        "hair-shampoo";
+    grid-template-rows: 0vh 45vh 40vh;
+    grid-template-columns: 50% 50%;
+    width: repeat(3, 100vh);
+}
+
+.services2-text .hot-shave {
+    grid-area: hot-shave;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(191 146 91);
+    width: 100vw;
+}
+
+.services2-text .hair-shampoo {
+    grid-area: hair-shampoo;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(183 134 73);
+    width: 100vw;
+}
+
+.services2-text h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+
+.services2-text p {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.9em;
+}
+
+.shave-client img {
+    margin-top: -23%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 150px;
+    clip-path: circle(40%);
+    opacity: 95%;
+}
+
+.shampoo-client img {
+    margin-top: -24%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 150px;
+    clip-path: circle(40%);
+    opacity: 94%;
+}
+
+/*about us*/
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 35vh 15vh; */
+    width: 100vw;
+}
+
+.about-us img {
+    flex-direction: column;
+    margin-top: -13vh;
+    height: 50vh;
+    width: 94vw;
+    object-fit: cover;
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+.about-us h2 {
+    flex-direction: column;
+}
+
+.about-us h3 {
+    flex-direction: column;
+}
+
+.about-us p {
+    flex-direction: column;
+}
+
+.experience {
+    flex-direction: column;
+}

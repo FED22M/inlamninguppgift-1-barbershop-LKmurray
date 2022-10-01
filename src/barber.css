@@ -1,30 +1,47 @@
-body{
+body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     margin: 0px;
     padding: 0px;
 }
-header{
+
+div.wrapper {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50% 50%;
+    grid-template-areas:
+        "header nav"
+        "main main"
+        "footer footer";
+}
+
+.wrapper header {
+    grid-area: header;
     position: fixed;
-    background-color: black; /*håll koll*/
+    background-color: black;
+    /*håll koll*/
     opacity: 80%;
     padding: 5px;
     margin: 6px auto;
     width: 100%;
 }
-header h1{
+
+header h1 {
     font-size: 35px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
     display: inline-block;
     padding: 0px 0px;
-    margin: 0px 0px 0px 5px; 
+    margin: 0px 0px 0px 5px;
     border: none;
 }
-header nav{
+
+header nav {
+    grid-area: nav;
     float: right;
     margin: 8px 18px 0px 0px;
 }
-header nav p{
+
+header nav p {
     color: white;
     font-family: 'Barlow Semi Condensed', sans-serif;
     opacity: 80%;
@@ -32,7 +49,13 @@ header nav p{
     display: inline-block;
     margin: 0px;
 }
-div.container{
+
+main.banner h2 {
+    grid-area: main;
+    align-self: center;
+    margin: 150% 20px 0px 0px;
+    color: 191 146 91;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     background-color: aqua;
-    display: grid;
+    /*tillfällig*/
 }
