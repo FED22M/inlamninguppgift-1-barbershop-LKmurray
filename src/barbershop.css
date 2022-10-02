@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Poppins:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:wght@300;400&display=swap');
 
 body {
     padding: 0px;
@@ -16,6 +15,7 @@ body {
         "content-5"
         "content-6";
     width: repeat(6, 100vw);
+    /* extra ; ? kolla upp och ev ta bort denna rad */
 }
 
 .content-1 {
@@ -438,57 +438,6 @@ nav p {
 }
 
 /* carouselslide */
-
-.review-slide {
-    flex-direction: column;
-    margin-right: 3.5%;
-    background-color: white;
-    margin-bottom: 5%;
-}
-
-.quote-icon {
-    border: 12px solid rgb(191 146 91);
-    border-radius: 50%;
-    background-color: rgb(191 146 91);
-    padding: 8px 8px 6px 8px;
-    clip-path: circle(40%);
-}
-
-.review-slide i {
-    color: white;
-}
-
-.review-slide blockquote {
-    font-family: 'Poppins', sans-serif;
-    color: rgb(81, 81, 81)
-}
-
-.happy-costumer img {
-    margin-top: -18%;
-    height: auto;
-    width: 100px;
-}
-
-.happy-costumer2 img {
-    margin-top: 10%;
-    height: auto;
-    width: 100px;
-}
-
-.happy-costumer {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    clip-path: circle(40%);
-}
-
-.happy-costumer2 {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    clip-path: circle(40%);
-}
-
 .slideshow {
     box-sizing: border-box
 }
@@ -521,13 +470,20 @@ nav p {
 }
 
 .next {
-    right: 0;
+    right: 1%;
     border-radius: 3px 0 0 3px;
+    color: rgba(191, 146, 91, 0.2);
+}
+
+.prev {
+    /* tillagd av mig */
+    color: rgba(191, 146, 91, 0.2);
+    padding-left: 1%;
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(191 146 91);
 }
 
 .dot {
@@ -543,20 +499,124 @@ nav p {
 
 .active,
 .dot:hover {
-    background-color: #717171;
+    background-color: rgb(191 146 91);
 }
 
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.6
     }
 
     to {
-        opacity: 1
+        opacity: 0.9
     }
+}
+
+.review-slide {
+    flex-direction: column;
+    margin-right: 3.5%;
+    background-color: white;
+    margin-bottom: 5%;
+}
+
+.quote-icon {
+    position: relative;
+    left: 3%;
+    top: -12px;
+    border: 12px solid rgb(191 146 91);
+    background-color: rgb(191 146 91);
+    padding: 8px 8px 6px 8px;
+    clip-path: circle(40%);
+}
+
+.review-slide i {
+    color: white;
+}
+
+.review-costumer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 0% 5% 0%;
+    max-height: 200.492px;
+    /* baserat på happy-costumer2:s höjd */
+}
+
+blockquote.author {
+    margin: 2% 0% 0% 2%;
+}
+
+blockquote p {
+    margin: 0% 0% 3% 0%;
+    line-height: 1.8em;
+}
+
+blockquote .stars {
+    color: rgb(191 146 91);
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+
+blockquote .roger {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+blockquote .costumer {
+    color: rgb(191 146 91);
+    font-size: 0.8em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.review-slide blockquote {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(81, 81, 81)
+}
+
+.main-quote {
+    line-height: 2em;
+    margin: 0% 10% 0% 5%;
+}
+
+.happy-costumer {
+    margin: 1% 0% 0% 5%;
+}
+
+.happy-costumer img {
+    display: inline-block;
+    flex-direction: row;
+    margin-top: -18%;
+    height: auto;
+    width: 100px;
+}
+
+.happy-costumer2 {
+    margin-left: 5%;
+}
+
+.happy-costumer2 img {
+    margin-top: 10%;
+    height: auto;
+    width: 100px;
+}
+
+.happy-costumer {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    clip-path: circle(40%);
+}
+
+.happy-costumer2 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    clip-path: circle(40%);
 }
