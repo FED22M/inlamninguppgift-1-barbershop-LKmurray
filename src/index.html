@@ -19,7 +19,14 @@
                 <div class="header-text">
                     <h1>Barbershop</h1>
                     <nav>
-                        <p>Menu</p>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div id="menu-links">
+                            <a href="#services">Our Services</a>
+                            <a href="#about">About Us</a>
+                            <a href="#reviews">Reviews</a>
+                        </div>
                     </nav>
                 </div>
             </header>
@@ -31,9 +38,9 @@
                         <p>A small river namned Duden flows by their place and supplies it with the
                             necessary regelialia. It is a paradisematic country, in which roasted parts
                             of sentences fly into your mouth.</p>
-                        <button class="about" type="button">
-                            <p>Learn more about us</p>
-                        </button>
+                        <div class="about">
+                            <p><a href="#about-us-link">Learn more about us</a></p>
+                        </div>
                     </div>
                 </div>
         </div>
@@ -62,6 +69,7 @@
             </div>
         </div>
         <div class="content-3">
+            <div id="services"></div>
             <div class="services2">
                 <div class="services2-text">
                     <div class="hot-shave">
@@ -86,6 +94,8 @@
             </div>
         </div>
         <div class="content-4">
+            <div id="about"></div>
+            <div id="about-us-link"></div>
             <div class="about-us">
                 <div class="img-flex">
                     <img class="barber-shop" src="img/agustin-fernandez-unsplash.jpg" alt="barber studio">
@@ -107,6 +117,7 @@
             </div>
         </div>
         <div class="content-5">
+            <div id="reviews"></div>
             <!-- Slideshowen nedan -->
             <div class="review">
                 <div class="about-review">
@@ -203,46 +214,64 @@
         </div>
         </main>
         <div class="content-6">
-            <footer>
-                <div class="some-icons">
-                    <span class="twitter"><i class="fa fa-twitter"></i></span>
-                    <span class="facebook"><i class="fa fa-facebook"></i></span>
-                    <span class="instagram"><i class="fa fa-instagram"></i></span>
-                </div>
-                <div class="explore">
-                    <h2>Explore</h2>
-                    <ul>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Gallery</li>
-                        <li>Blog</li>
-                    </ul>
-                </div>
-                <div class="info">
-                    <h2>Info</h2>
-                    <ul>
-                        <li>Join Us</li>
-                        <li>Make Appointment</li>
-                        <li>Privacy and Policy</li>
-                        <li>Terms and Conditions</li>
-                    </ul>
-                </div>
-                <div class="question">
-                    <h2>Have a question?</h2>
-                    <ul>
-                        <!-- tanke: ta bort bulletsen innan li och ersätt med i-icons-->
-                        <li><i class="fa fa-map"></i>Fake St. Mountain View, San Francisco,
-                            California, USA</li>
-                        <li><i class="fa fa-phone"></i> <a href="tel:+23923929210">+2 392 3929 210</a></li>
-                        <li><i class="fa fa-paper-plane"></i> <a
-                                href="mailto:info@yourdomain.com"></a>info@yourdomain.com
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+            <div class="footer-text">
+                <footer>
+                    <div class="some-icons">
+                        <span class="twitter"><a href="https://twitter.com" target="_blank"><i
+                                    class="fa fa-twitter"></i></a></span>
+                        <span class="facebook"><a href="https://facebook.com" target="_blank"><i
+                                    class="fa fa-facebook"></i></a></span>
+                        <span class="instagram"><a href="https://instagram.com" target="_blank"><i
+                                    class="fa fa-instagram"></i></a></span>
+                    </div>
+                    <div class="explore">
+                        <h2>Explore</h2>
+                        <!-- "list" for screenreaders -->
+                        <ul role="list">
+                            <li><span class="list-arrow">&#10095;</span>About</li>
+                            <li><span class="list-arrow">&#10095;</span>Services</li>
+                            <li><span class="list-arrow">&#10095;</span>Gallery</li>
+                            <li><span class="list-arrow">&#10095;</span>Blog</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h2>Info</h2>
+                        <ul role="list">
+                            <li><span class="list-arrow">&#10095;</span>Join Us</li>
+                            <li><span class="list-arrow">&#10095;</span>Make Appointment</li>
+                            <li><span class="list-arrow">&#10095;</span>Privacy & Policy</li>
+                            <li><span class="list-arrow">&#10095;</span>Terms & Conditions</li>
+                        </ul role="list">
+                    </div>
+                    <div class="question">
+                        <h2>Have a question?</h2>
+                        <ul class="contact" role="list">
+                            <li><i class="fa fa-map"></i>
+                                Fake St. Mountain View, San Francisco,<br>
+                                <p>California, USA</p>
+                            </li>
+                            <li><i class="fa fa-phone"></i> <a href="tel:+23923929210">+2 392 3929 210</a></li>
+                            <li><i class="fa fa-paper-plane"></i><a
+                                    href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
         </div>
     </div>
     <script>
+        // hamburgermenyn
+        function myFunction() {
+            var x = document.getElementById("menu-links");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        // slideshowen
         let slideIndex = 1;
         showSlides(slideIndex);
 

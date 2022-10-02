@@ -50,7 +50,7 @@ body {
 
 .content-6 {
     grid-area: content-6;
-    height: 100vh;
+    height: 103vh;
     width: 100vw;
 }
 
@@ -64,34 +64,72 @@ body {
 }
 
 header {
-    background-color: rgba(9, 6, 1, 0.6);
+    display: flex;
+    background-color: rgba(9, 6, 1, 0.75);
     position: fixed;
     z-index: 1;
     top: 6px;
 }
 
 header .header-text {
+    overflow: hidden;
+    position: relative;
     width: 100vw;
     text-transform: uppercase;
 }
 
+/* hamburgermenyn */
+
+.header-text #menu-links {
+    display: none;
+}
+
+.header-text a {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+.header-text #menu-links a:hover {
+    background-color: rgba(191, 146, 91, 0.3);
+}
+
 .header-text h1 {
-    display: inline-block;
+    float: left;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
     font-size: 33px;
     font-weight: 700;
     padding: 2px;
-    margin: 0px 0px 0px 8px;
+    margin: 0px 0px 2px 8px;
     letter-spacing: 0.3px;
 }
 
 nav {
-    float: right;
     margin: 0px;
 }
 
-nav p {
+nav .fa.fa-bars {
+    margin-top: -2%;
+    margin-right: 3%;
+    float: right;
+    font-size: 25px;
+    color: white;
+}
+
+nav .fa.fa-bars:active {
+    color: rgb(191 146 91);
+}
+
+nav .fa.fa-bars:hover {
+    color: rgb(191 146 91);
+}
+
+/* om hamburger inte fungerar */
+/* nav p {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 20px;
     color: rgba(225, 225, 225, 0.5);
@@ -100,7 +138,7 @@ nav p {
     display: inline-block;
     margin-top: 0.45em;
     margin-right: 1em;
-}
+} */
 
 .banner .banner-text {
     display: flex;
@@ -156,12 +194,27 @@ nav p {
 
 .about p {
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: rgb(191 146 91);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.8px;
-    padding: 3% 6% 4% 6%;
+    padding: 4% 6% 3% 9%;
+}
+
+.about p a:link {
+    color: rgb(191 146 91);
+    text-decoration: none;
+}
+
+.about p a:visited {
+    color: rgb(191 146 91);
+    text-decoration: none;
+}
+
+.about p a:hover {
+    color: rgb(191 146 91);
+    text-decoration: none;
 }
 
 .services .services-text {
@@ -300,8 +353,6 @@ nav p {
 /*about us*/
 
 .about-us {
-    /* pair with safe? to prevent off screen */
-    /* also - The safest values are flex-start, flex-end, and center. */
     display: flex;
     flex-wrap: wrap;
     justify-content: safe;
@@ -397,7 +448,6 @@ nav p {
 }
 
 /* recensioner */
-/* OBS - använd :firstchild eller dyl på något vis - eller hover sklrt */
 
 .content-5 {
     background-color: rgb(235 232 222);
@@ -438,6 +488,7 @@ nav p {
 }
 
 /* carouselslide */
+
 .slideshow {
     box-sizing: border-box
 }
@@ -454,7 +505,6 @@ nav p {
 
 .prev,
 .next {
-    /* om möjligt - ta bort dessa */
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -619,4 +669,122 @@ blockquote .costumer {
     height: 100px;
     overflow: hidden;
     clip-path: circle(40%);
+}
+
+/* footer */
+
+.content-6 {
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-text {
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 100vh;
+    margin-left: 2%;
+}
+
+footer .some-icons {
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.some-icons .twitter {
+    flex-direction: row;
+    border: 12px solid rgb(191 146 91);
+    color: white;
+    background-color: rgb(191 146 91);
+    padding: 8px 8px 6px 8px;
+    clip-path: circle(40%);
+    width: 3%;
+}
+
+.some-icons .facebook {
+    flex-direction: row;
+    border: 12px solid rgb(191 146 91);
+    color: white;
+    background-color: rgb(191 146 91);
+    padding: 8px 8px 6px 12px;
+    clip-path: circle(40%);
+    width: 3%;
+}
+
+.some-icons .instagram {
+    flex-direction: row;
+    border: 12px solid rgb(191 146 91);
+    color: white;
+    background-color: rgb(191 146 91);
+    padding: 8px 8px 6px 8px;
+    clip-path: circle(40%);
+    width: 3%;
+}
+
+.some-icons a:link {
+    color: white;
+}
+
+.some-icons a:visited {
+    color: white;
+}
+
+.some-icons a:hover {
+    color: white;
+}
+
+footer h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0%;
+    line-height: 2em;
+    /* list-style-position: outside;   in case jag behöver */
+}
+
+li .list-arrow {
+    padding-right: 2%;
+}
+
+footer li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: #ffffffc2;
+}
+
+ul.contact i {
+    color: rgb(191 146 91);
+    padding-right: 3%;
+}
+
+li p {
+    display: inline-block;
+    /* ändra lite om tid finns */
+    margin: 0;
+    padding-left: 7%;
+}
+
+a[href*="tel:"]:link {
+    text-decoration: none;
+    color: #ffffffc2;
+}
+
+/* För användarvänlighet */
+a[href*="tel:"]:hover {
+    text-decoration: underline;
+    color: #ffffffec;
+}
+
+a[href*="mailto"]:link {
+    text-decoration: none;
+    color: #ffffffc2;
+}
+
+/* För användarvänlighet */
+a[href*="mailto"]:hover {
+    text-decoration: underline;
+    color: #ffffffec;
 }
