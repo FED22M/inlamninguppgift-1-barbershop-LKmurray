@@ -1031,7 +1031,6 @@ a[href*="mailto"]:hover {
         width: 15%;
         padding: 8px 24px 6px 8px;
         font-size: 180%;
-        clip-path: 0;
         border-radius: 50px 50px 50px 50px;
     }
 
@@ -1040,7 +1039,6 @@ a[href*="mailto"]:hover {
         width: 15%;
         font-size: 180%;
         padding: 8px 24px 6px 8px;
-        clip-path: 0;
         border-radius: 50px 50px 50px 50px;
     }
 
@@ -1049,7 +1047,6 @@ a[href*="mailto"]:hover {
         width: 15%;
         font-size: 180%;
         padding: 8px 24px 6px 8px;
-        clip-path: 0;
         border-radius: 50px 50px 50px 50px;
     }
 
