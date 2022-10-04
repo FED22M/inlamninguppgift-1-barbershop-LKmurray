@@ -30,11 +30,11 @@
                     </nav>
                 </div>
             </header>
-            <main>
-                <div class="banner">
-                    <div class="banner-text">
-                        <h2>Welcome to Barbershop</h2>
-                        <h3>We will make <span class="outline-text">your style</span> of your dreams</h3>
+            <div class="banner">
+                <div class="banner-text">
+                    <h2>Welcome to Barbershop</h2>
+                    <h3>We will make <span class="outline-text">your<br> style</span> of your dreams</h3>
+                    <div class="menu-line">
                         <p>A small river namned Duden flows by their place and supplies it with the
                             necessary regelialia. It is a paradisematic country, in which roasted parts
                             of sentences fly into your mouth.</p>
@@ -43,8 +43,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
         <div class="content-2">
+            <div id="services"></div>
             <div class="services">
                 <div class="services-text">
                     <div class="hair-styles">
@@ -69,7 +71,6 @@
             </div>
         </div>
         <div class="content-3">
-            <div id="services"></div>
             <div class="services2">
                 <div class="services2-text">
                     <div class="hot-shave">
@@ -97,22 +98,20 @@
             <div id="about"></div>
             <div id="about-us-link"></div>
             <div class="about-us">
-                <div class="img-flex">
-                    <img class="barber-shop" src="img/agustin-fernandez-unsplash.jpg" alt="barber studio">
-                </div>
+                <img class="barber-shop" src="img/agustin-fernandez-unsplash.jpg" alt="barber studio">
                 <div class="about-barber">
-                    <h2>About barber<h2>
-                            <h3>A smooth barber experience in your town</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-                                right at the coastof the Semantics, a large language ocean. A small river named
-                                Duden flows by their place and supplies it with the necessary regelialia.</p>
-                            <div class="experience">
-                                <i style="font-size:24px" class="fa">&#xf073;</i>
-                                <div class="experience-text">
-                                    <p><span class="experience-20">20</span><br>Years of<br> experience</p>
-                                </div>
-                            </div>
+                    <h3>About barber</h3>
+                    <h2>A smooth barber experience in your town</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                        and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+                        right at the coastof the Semantics, a large language ocean. A small river named
+                        Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <div class="experience">
+                        <i style="font-size:24px" class="fa">&#xf073;</i>
+                        <div class="experience-text">
+                            <p><span class="experience-20">20</span><br>Years of<br> experience</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,7 +211,6 @@
                 </div>
             </div>
         </div>
-        </main>
         <div class="content-6">
             <div class="footer-text">
                 <footer>
@@ -232,8 +230,7 @@
                     </div>
                     <div class="explore">
                         <h2>Explore</h2>
-                        <!-- "list" for screenreaders -->
-                        <ul role="list">
+                        <ul>
                             <li><span class="list-arrow">&#10095;</span>About</li>
                             <li><span class="list-arrow">&#10095;</span>Services</li>
                             <li><span class="list-arrow">&#10095;</span>Gallery</li>
@@ -242,16 +239,16 @@
                     </div>
                     <div class="info">
                         <h2>Info</h2>
-                        <ul role="list">
+                        <ul>
                             <li><span class="list-arrow">&#10095;</span>Join Us</li>
                             <li><span class="list-arrow">&#10095;</span>Make Appointment</li>
                             <li><span class="list-arrow">&#10095;</span>Privacy & Policy</li>
                             <li><span class="list-arrow">&#10095;</span>Terms & Conditions</li>
-                        </ul role="list">
+                        </ul>
                     </div>
                     <div class="question">
                         <h2>Have a question?</h2>
-                        <ul class="contact" role="list">
+                        <ul class="contact">
                             <li><i class="fa fa-map"></i>
                                 Fake St. Mountain View, San Francisco,<br>
                                 <p>California, USA</p>
@@ -281,12 +278,12 @@
         let slideIndex = 1;
         showSlides(slideIndex);
 
-        // Next/previous controls
+        // Next/previous kontroller
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
+        // Thumbnail image kontroller
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }

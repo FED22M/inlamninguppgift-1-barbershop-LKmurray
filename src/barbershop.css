@@ -42,13 +42,13 @@ body {
 
 .content-5 {
     grid-area: content-5;
-    height: 100vh, min-content;
+    height: 100vh;
     width: 100vw;
 }
 
 .content-6 {
     grid-area: content-6;
-    height: min-content;
+    height: 100vh;
     width: 100vw;
     background-color: rgb(0, 0, 0);
 }
@@ -76,15 +76,20 @@ header .header-text {
     justify-content: space-between;
     flex-direction: row;
     overflow: hidden;
+    float: left;
     position: relative;
     width: 100vw;
     text-transform: uppercase;
 }
 
-/* hamburgermenyn */
+/* hamburgermenyn HANN TYVÄRR INTE GÖRA DET BÄTTRE ÄN SÅHÄR */
 
 .header-text #menu-links {
     display: none;
+}
+
+.header-text #menu-links a:hover {
+    background-color: rgba(191, 146, 91, 0.3);
 }
 
 .header-text a {
@@ -94,10 +99,6 @@ header .header-text {
     text-decoration: none;
     font-size: 20px;
     display: block;
-}
-
-.header-text #menu-links a:hover {
-    background-color: rgba(191, 146, 91, 0.3);
 }
 
 .header-text h1 {
@@ -160,7 +161,7 @@ nav .fa.fa-bars:hover {
     font-size: 1em;
     color: #ffffff;
     line-height: 30px;
-    margin: 0% 0% 2% 0%;
+    margin: 0% 4% 5% 0%;
     padding-left: 3%;
 }
 
@@ -258,7 +259,7 @@ nav .fa.fa-bars:hover {
 }
 
 .beard-trim img {
-    margin-top: -23%;
+    margin-top: calc(0vh - 106px);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -315,7 +316,7 @@ nav .fa.fa-bars:hover {
 }
 
 .shave-client img {
-    margin-top: -23%;
+    margin-top: calc(0vh - 112px);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -326,7 +327,7 @@ nav .fa.fa-bars:hover {
 }
 
 .shampoo-client img {
-    margin-top: -24%;
+    margin-top: calc(0vh - 112px);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -351,6 +352,7 @@ nav .fa.fa-bars:hover {
     margin-top: 1em;
     height: 50vh;
     width: 94vw;
+    padding-left: 0%;
     object-fit: cover;
 }
 
@@ -364,6 +366,16 @@ nav .fa.fa-bars:hover {
     display: inline-block;
     flex-direction: column;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    color: rgb(20 27 37);
+    font-size: 1.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 2%;
+}
+
+.about-us h3 {
+    flex-direction: column;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     color: rgb(191 146 91);
     font-size: 1.2em;
     font-weight: 600;
@@ -372,20 +384,11 @@ nav .fa.fa-bars:hover {
     margin-bottom: 0;
 }
 
-.about-us h3 {
-    flex-direction: column;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    color: rgb(20 27 37);
-    font-size: 1.7em;
-    text-transform: uppercase;
-    margin-top: 2%;
-}
-
 .about-us .about-barber p {
     margin: 0;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: rgba(20, 27, 37, 0.750);
     line-height: 1.8em;
     padding-right: 1em;
@@ -397,7 +400,7 @@ nav .fa.fa-bars:hover {
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: #ffffff;
     background-color: rgb(191 146 91);
-    width: 40%;
+    width: 50%;
     margin-top: 7%;
     margin-bottom: 3%;
 }
@@ -441,11 +444,15 @@ nav .fa.fa-bars:hover {
     background-color: rgb(235 232 222);
 }
 
+.review-desktop {
+    display: none;
+}
+
 .review {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 15% auto 0% 15px;
+    margin: 30% auto 0% 15px;
     max-width: 100vw;
     align-items: center;
 }
@@ -475,10 +482,10 @@ nav .fa.fa-bars:hover {
     margin-top: 0%;
 }
 
-/* carouselslide */
+/* carouselslide TYVÄRR HANN JAG INTE ÄNDRA FÖR DESKTOP */
 
 .slideshow {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .slideshow-container {
@@ -578,7 +585,7 @@ nav .fa.fa-bars:hover {
 .review-costumer {
     display: flex;
     flex-wrap: wrap;
-    padding: 5% 0% 5% 0%;
+    padding: 5% 0% 10% 0%;
     max-height: 200.492px;
     /* baserat på happy-costumer2:s höjd */
 }
@@ -660,9 +667,13 @@ blockquote .costumer {
 
 /* footer */
 
-/* .footer {
-    display: block;
-}*/
+.content-6 {
+    min-height: 105vh;
+}
+
+footer {
+    height: min-content;
+}
 
 .footer-text {
     margin-left: 2%;
@@ -746,7 +757,6 @@ footer ul {
     list-style: none;
     padding-left: 0%;
     line-height: 2em;
-    /* list-style-position: outside;   in case jag behöver */
 }
 
 li .list-arrow {
@@ -766,7 +776,6 @@ ul.contact i {
 
 li p {
     display: inline-block;
-    /* ändra lite om tid finns */
     margin: 0;
     padding-left: 7%;
 }
@@ -793,102 +802,20 @@ a[href*="mailto"]:hover {
     color: #ffffffec;
 }
 
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
-/* TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG TILLFÄLLIG */
 /* media querys */
+
+@media screen and (max-width: 480px) {
+    .banner-text p {
+        font-size: 1em;
+    }
+}
 
 @media screen and (min-width: 480px) {
 
-    /* .wrapper {
-        display: grid;
-        grid-template-areas:
-            "content-1"
-            "content-2"
-            "content-3"
-            "content-4"
-            "content-5"
-            "content-6";
-        width: repeat(6, 100vw);
-    } */
-
-    /* .content-1 {
-        grid-area: content-1;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    .content-2 {
-        grid-area: content-2;
-        height: 122vh;
-        width: 100vw;
-    }
-
-    .content-3 {
-        grid-area: content-3;
-        height: 110vh;
-        width: 100vw;
-    }
-
-    .content-4 {
-        grid-area: content-4;
-        height: 120vh;
-        width: 100vw;
-    }
-
-    .content-5 {
-        grid-area: content-5;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    .content-6 {
-        grid-area: content-6;
-        height: 103vh;
-        width: 100vw;
-    } */
-
     /* .content-1  */
-
-    /* .banner {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/andre-reis-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        height: 115vh;
-        width: 100vw;
-    } */
-
-    /* header {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    } */
-
-    /* header .header-text {
-        overflow: hidden;
-        position: relative;
-        width: 100vw;
-        text-transform: uppercase;
-    } */
 
     /* hamburgermenyn */
 
-    /* .header-text #menu-links {
-        display: none;
-    } */
-
-    /* ÄNDRAD */
     .header-text {
         display: flex;
         align-items: center;
@@ -896,7 +823,6 @@ a[href*="mailto"]:hover {
         flex-direction: row;
     }
 
-    /*ändrad 2 st */
     .header-text a {
         font-size: 1.5em;
     }
@@ -905,12 +831,6 @@ a[href*="mailto"]:hover {
         padding-top: 5%;
     }
 
-    /* 
-    .header-text #menu-links a:hover {
-        background-color: rgba(191, 146, 91, 0.3);
-    } */
-
-    /*ändrad*/
     .header-text h1 {
         font-size: 2.8em;
     }
@@ -923,73 +843,11 @@ a[href*="mailto"]:hover {
         color: white;
     }
 
-    /* nav {
-        display: flex;
-        flex-direction: row;
-    } */
-
-    /* .header-text .fa.fa-bars {
-        float: right;
-    } */
-
-    /* .header-text a.icon {
-        padding: 0;
-    } */
-
-    /* nav .fa.fa-bars:active {
-        color: rgb(191 146 91);
-    }
-
-    nav .fa.fa-bars:hover {
-        color: rgb(191 146 91);
-    } */
-
-    /* .banner .banner-text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .banner-text h2 {
-        font-family: 'Barlow Semi Condensed', sans-serif;
-        color: rgb(191 146 91);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 50% 0% 1% 0%;
-        padding-left: 2%;
-    }
-
-    .banner-text h3 {
-        display: inline-block;
-        font-family: 'Barlow Semi Condensed', sans-serif;
-        font-size: 3em;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: -0.5px;
-        margin: 0% 0% 6% 0%;
-        width: 98vw;
-        padding-left: 2%;
-    }
-
-    .banner-text h3 .outline-text {
-        color: rgba(234, 240, 246, 0);
-        -webkit-text-stroke: 1.1px white;
-        width: 100vw;
-    } */
-
-    /* ändrad*/
     .banner-text p {
         max-width: 90vw;
         font-size: 1.1em;
     }
 
-    /* .banner .banner-text .about {
-        white-space: nowrap;
-        width: max-content;
-        padding-right: 8%;
-        margin-top: 5%;
-    } */
-
-    /* denna och under = ÄNDRAD */
     .banner .banner-text .about {
         width: min-content;
     }
@@ -999,107 +857,30 @@ a[href*="mailto"]:hover {
         margin-right: 45px;
     }
 
-    /* 
-    .about p a:link {
-        color: rgb(191 146 91);
-        text-decoration: none;
-    }
-
-    .about p a:visited {
-        color: rgb(191 146 91);
-        text-decoration: none;
-    }
-
-    .about p a:hover {
-        color: rgb(191 146 91);
-        text-decoration: none;
-    } */
-
     /* services */
 
-    /* .services .services-text {
-        display: grid;
-        grid-template-areas:
-            "."
-            "hair-styles"
-            "beard-trim";
-        grid-template-rows: 12vh 55vh 55vh;
-    } */
-
-    /* .services-text .hair-styles {
-        grid-area: hair-styles;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        background-color: rgb(191 146 91);
-    }
-
-    .services-text .beard-trim {
-        grid-area: beard-trim;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        background-color: rgb(183 134 73);
-    } */
-
-    /* BÅDA NEDAN ÄNDRADE */
     .services-text h2 {
         font-size: 2.1em;
         padding-top: 1%;
     }
 
     .services-text p {
-        font-size: 1.1em;
+        font-size: 1.3em;
         line-height: 2em;
-        padding: 2% 2% 0% 2%;
+        padding: 4% 2% 0% 2%;
     }
 
-    /* ÄNDRAD 2 st */
     .hair-client img {
         margin-top: calc(0vh - 112px);
         /* MIKKOOOOOO ta väldigt gärna en titt på denna uträkning :') */
-        /* height: auto;
-        width: 150px;
-        clip-path: circle(40%);
-        opacity: 89%; */
     }
 
     .beard-trim img {
         margin-top: calc(0vh - 106px);
-        /* display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: 170px;
-        clip-path: circle(40%);
-        opacity: 96%; */
     }
 
     /*sida 2 services*/
 
-    /* .services2-text {
-        display: grid;
-        grid-template-areas:
-            "hot-shave"
-            "hair-shampoo";
-        grid-template-rows: 55vh 55vh;
-    } */
-
-    /* .services2-text .hot-shave {
-        grid-area: hot-shave;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        background-color: rgb(191 146 91);
-        width: 100vw;
-    }
-
-    .services2-text .hair-shampoo {
-        grid-area: hair-shampoo;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        background-color: rgb(183 134 73);
-        width: 100vw;
-    } */
-
-    /* 4 NEDAN ÄNDRADE */
     .services2-text h2 {
         font-size: 2.1em;
         padding-top: 1%;
@@ -1108,53 +889,19 @@ a[href*="mailto"]:hover {
     .services2-text p {
         font-size: 1.3em;
         line-height: 2em;
-        padding: 2% 2% 0% 2%;
+        padding: 4% 2% 0% 2%;
     }
 
     .shave-client img {
         margin-top: calc(0vh - 112px);
-        /* display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: 150px;
-        clip-path: circle(40%);
-        opacity: 95%; */
     }
 
     .shampoo-client img {
         margin-top: calc(0vh - 112px);
-        /* display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: 150px;
-        clip-path: circle(40%);
-        opacity: 94%; */
     }
 
     /*about us*/
 
-    /* .about-us {
-        justify-content: center;
-        margin-left: 0;
-    } */
-
-
-    /* .about-us img {
-        flex-direction: column;
-        margin-top: 1em;
-        height: 50vh;
-        width: 94vw;
-        object-fit: cover;
-    } */
-    /* 
-    .about-barber {
-        flex-direction: column;
-    } */
-
-
-    /* ÄNDRAD 6 nedan */
     .about-us h2 {
         font-size: 1.8em;
     }
@@ -1182,30 +929,16 @@ a[href*="mailto"]:hover {
         line-height: 1rem;
     }
 
-    /* .experience .experience-20 {
-        flex-direction: row;
-        display: inline-block;
-        font-family: 'Barlow Semi Condensed', sans-serif;
-        font-size: 2.4em;
-        color: #ffffff;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        margin-bottom: 18%;
-    } */
+    .about-us img {
+        padding-left: 0%;
+    }
 
     /* recensioner */
 
-    /* .content-5 {
-        background-color: rgb(235 232 222);
-    } */
-
-    /* ÄNDRAD */
     .review {
         margin-top: 15%;
     }
 
-    /* ÄNDRAD 3 nedan */
     .about-review {
         max-width: 80vw;
     }
@@ -1220,21 +953,6 @@ a[href*="mailto"]:hover {
 
     /* carouselslide */
 
-    /* .slideshow {
-        box-sizing: border-box
-    } */
-
-    /* .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    } */
-    /* 
-    .review-slide {
-        display: none;
-    } */
-
-    /* ÄNDRAD 3 nedan */
     .prev,
     .next {
         font-size: 28px;
@@ -1249,15 +967,6 @@ a[href*="mailto"]:hover {
         width: 15px;
     }
 
-    /* .review-slide {
-        height: min-content;
-        flex-direction: column;
-        margin-right: 3.5%;
-        background-color: white;
-        margin-bottom: 5%;
-    } */
-
-    /* ÄNDRAD 2 nedan */
     .quote-icon {
         border: 18px solid rgb(191 146 91);
     }
@@ -1266,61 +975,15 @@ a[href*="mailto"]:hover {
         max-height: min-content;
     }
 
-    /* 
-    blockquote.author {
-        margin: 2% 0% 0% 2%;
-    } */
-
-    /* ÄNDRAD */
     blockquote p {
         font-size: 1.3em;
         padding-top: 5%;
     }
 
-    /* blockquote .stars {
-        color: rgb(191 146 91);
-        font-size: 0.8em;
-        letter-spacing: 0.2em;
-    }
-
-    blockquote .roger {
-        color: black;
-        font-size: 1.2em;
-        font-weight: 800;
-    } */
-    /* 
-    blockquote .costumer {
-        color: rgb(191 146 91);
-        font-size: 0.8em;
-        font-weight: 800;
-        text-transform: uppercase;
-    } */
-
-    /* 
-    .review-slide blockquote {
-        font-family: 'Poppins', sans-serif;
-        color: rgb(81, 81, 81)
-    } */
-    /* 
-    .main-quote {
-        line-height: 2em;
-        margin: 0% 10% 0% 5%;
-    }
-
-    .happy-costumer {
-        margin: 1% 0% 0% 5%;
-    } */
-
-    /* ÄNDRAD */
     .happy-costumer img {
         width: 150px;
     }
 
-    /* .happy-costumer2 {
-        margin-left: 5%;
-    } */
-
-    /* ÄNDRAD 3*/
     .happy-costumer2 img {
         width: 150px;
     }
@@ -1336,39 +999,6 @@ a[href*="mailto"]:hover {
     }
 
     /* footer */
-
-    /* .content-6 {
-        background-color: rgb(0, 0, 0);
-    } */
-    /* 
-    .footer-text {
-        max-height: 100vh;
-        margin-left: 2%;
-    } */
-    /* 
-    footer .some-icons {
-        display: flex;
-        flex-direction: row;
-        margin-top: 10%;
-        margin-bottom: 3%;
-    } */
-    /* .twitter-position {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .facebook-position {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .instagram-position {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    } */
 
     .some-icons .twitter {
         border: 15px solid rgb(191 146 91);
@@ -1397,95 +1027,171 @@ a[href*="mailto"]:hover {
         border-radius: 50px 50px 50px 50px;
     }
 
-    /* 
-    .some-icons i {
-        padding-left: 3px;
-    } */
-
-    /* 
-    .some-icons a {
-        justify-self: center;
-    } */
-
-    /* 
-    .twitter,
-    .facebook,
-    .instagram {
-        display: flex;
-        font-size: 180%;
-    } */
-
-    .some-icons a:link {
-        color: white;
-    }
-
-    .some-icons a:visited {
-        color: white;
-    }
-
-    .some-icons a:hover {
-        color: white;
-    }
-
     footer h2 {
-        font-family: 'Barlow Semi Condensed', sans-serif;
-        color: #ffffff;
-        text-transform: uppercase;
-    }
-
-    footer ul {
-        list-style: none;
-        padding-left: 0%;
-        line-height: 2em;
-        /* list-style-position: outside;   in case jag behöver */
-    }
-
-    li .list-arrow {
-        padding-right: 2%;
+        font-size: 2em;
     }
 
     footer li {
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.9em;
-        color: #ffffffc2;
-    }
-
-    ul.contact i {
-        color: rgb(191 146 91);
-        padding-right: 3%;
-    }
-
-    li p {
-        display: inline-block;
-        /* ändra lite om tid finns */
-        margin: 0;
-        padding-left: 7%;
-    }
-
-    a[href*="tel:"]:link {
-        text-decoration: none;
-        color: #ffffffc2;
-    }
-
-    /* För användarvänlighet */
-    a[href*="tel:"]:hover {
-        text-decoration: underline;
-        color: #ffffffec;
-    }
-
-    a[href*="mailto"]:link {
-        text-decoration: none;
-        color: #ffffffc2;
-    }
-
-    /* För användarvänlighet */
-    a[href*="mailto"]:hover {
-        text-decoration: underline;
-        color: #ffffffec;
+        font-size: 1.2em;
     }
 
 }
 
-@media screen and (min-width: 800px) {
-    .topnav a {}
+/* media query screen över 799px */
+
+@media screen and (min-width: 799px) {
+    .wrapper {
+        display: grid;
+        grid-template-areas:
+            "content-1 content-1"
+            "content-2 content-3"
+            "content-4 content-4"
+            "content-5 content-5"
+            "content-6 content-6";
+    }
+
+
+    .content-2 {
+        grid-area: content-2;
+        height: fit-content;
+        width: 50vw;
+    }
+
+    .services .services-text {
+        display: grid;
+        display: flex;
+        grid-template-areas:
+            "hair-styles"
+            "beard-trim";
+        grid-template-rows: 55vh 55vh;
+    }
+
+    .services2-text {
+        display: flex;
+    }
+
+    .content-3 {
+        grid-area: content-3;
+        height: fit-content;
+        width: 50vw;
+    }
+
+    .services2-text .hot-shave {
+        width: 50vw;
+    }
+
+    .services2-text .hair-shampoo {
+        width: 50vw;
+    }
+
+    .services-text p {
+        font-size: 1em;
+        padding-bottom: 12%;
+    }
+
+    .services2-text p {
+        font-size: 1em;
+        padding-bottom: 12%;
+    }
+
+    .content-4 {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .about-us {
+        width: 100vw;
+        margin: 0;
+        margin: 0 5% 0 5%;
+    }
+
+    .about-us img {
+        object-fit: cover;
+        object-position: 50% 0;
+        height: 80vh;
+        width: 35vw;
+    }
+
+    .about-barber {
+        margin-left: 5%;
+        float: right;
+        width: 40vw;
+    }
+
+    .about-us h3 {
+        margin-bottom: 10%;
+    }
+
+    .experience {
+        width: 70%;
+        height: 110px;
+    }
+
+    .review {
+        margin-top: 0%;
+    }
+
+    nav {
+        width: 60vw;
+    }
+
+    nav a {
+        float: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .header-text a:first-child {
+        padding: 20px 16px;
+        margin-right: 10px;
+    }
+
+    nav a.fa.fa-bars {
+        float: right;
+    }
+
+    .header-text #menu-links a:hover {
+        color: rgb(191 146 91);
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .header-text h1 {
+        margin-left: 140px;
+        max-width: 20vw;
+    }
+
+    .banner-text {
+        margin-left: 45vw;
+    }
+
+    .banner-text h2 {
+        margin-top: 30vh;
+        max-width: 50vw;
+    }
+
+    .banner-text h3 {
+        max-width: 50vw;
+        font-size: 4em;
+        margin-bottom: 2%;
+    }
+
+    .menu-line {
+        border-left: 3px solid rgb(191 146 91);
+        margin-left: 3%;
+        padding-top: 0%;
+        padding-left: 7%;
+        height: 160px;
+    }
+
+    footer li p {
+        padding-left: 5%;
+    }
+
+    .content-6 {
+        height: min-content;
+    }
+
+
 }
